@@ -67,9 +67,11 @@
      <Compile Include="Assets\Scripts\Job.cs" />
      <Compile Include="Assets\Scripts\JobManager.cs" />
      <Compile Include="Assets\Scripts\JobsUI.cs" />
+     <Compile Include="Assets\Scripts\Land.cs" />
      <Compile Include="Assets\Scripts\Pawn.cs" />
      <Compile Include="Assets\Scripts\Sleep.cs" />
      <Compile Include="Assets\Scripts\SleepUI.cs" />
+     <Compile Include="Assets\Scripts\World.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>E:/Workshop/Projects - Unity 5/einherjar/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1583757234049406}
+  m_IsPrefabAsset: 1
+--- !u!1 &1583757234049406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4264250717992376}
+  - component: {fileID: 114620878733072272}
+  m_Layer: 0
+  m_Name: forest-big
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4264250717992376
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1583757234049406}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114620878733072272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1583757234049406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c377d121821e63b4f953bf75ce416898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lengthMin: 10
+  lengthMax: 12
+  widthMin: 3
+  widthMax: 6
+  landLength: 0
+  tileTemplates:
+  - tile: {fileID: 1230940682551232, guid: ada1e065e8d5a7e4e9deb44905966607, type: 2}
+    rarity: 60
+  - tile: {fileID: 1067544003585776, guid: f657f0d9cc74a0241aaf7f498c153066, type: 2}
+    rarity: 30
+  - tile: {fileID: 1889736032525972, guid: 0618599025feddf4a9ca8938cdcf0d87, type: 2}
+    rarity: 20
