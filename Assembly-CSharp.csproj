@@ -53,6 +53,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshGenerator.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
      <Compile Include="Assets\Scripts\AllUI.cs" />
      <Compile Include="Assets\Scripts\Body.cs" />
      <Compile Include="Assets\Scripts\BodyUI.cs" />
@@ -68,6 +73,7 @@
      <Compile Include="Assets\Scripts\JobManager.cs" />
      <Compile Include="Assets\Scripts\JobsUI.cs" />
      <Compile Include="Assets\Scripts\Land.cs" />
+     <Compile Include="Assets\Scripts\Move.cs" />
      <Compile Include="Assets\Scripts\Pawn.cs" />
      <Compile Include="Assets\Scripts\Sleep.cs" />
      <Compile Include="Assets\Scripts\SleepUI.cs" />
