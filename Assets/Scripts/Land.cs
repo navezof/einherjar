@@ -76,4 +76,9 @@ public class Land : MonoBehaviour {
 		}
 		return null;
 	}
+
+	public GameObject GetRandomTile() {
+		int roll = Random.Range (0, tiles.Count);
+		return tiles [roll];
+	}
 }
