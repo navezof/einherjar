@@ -4,30 +4,24 @@ using UnityEngine;
 
 public class JobManager : MonoBehaviour {
 
-	public Pawn owner;
+	public Job currentJob;
+	public Job[] jobs;
 
-	List<Job> jobs = new List<Job>();
-
-	public JobsUI ui;
-	public GameObject[] startingJobs;
 
 	void Start () {
-		owner = GetComponent<Pawn> ();
-
 		InitializeJobs ();
 	}
 
 	void InitializeJobs() {
-		foreach (GameObject job in startingJobs) {
-			GameObject newJob = Instantiate (job, this.transform);
-			newJob.GetComponent<Job> ().owner = owner;
+		jobs = GetComponents<Job> ();
+
+		print ("count job : " + jobs.Length);
+
+		foreach (Job job in jobs) {
+			job.enabled = false;
 		}
-	}
 
-	void OnMouseDown() {
-		print ("click on jobs of " + gameObject.name);
-
-		ui.Setup (owner);
-		ui.Display (true);
+		currentJob = jobs [0];
+		jobs [0].enabled = true;
 	}
 }

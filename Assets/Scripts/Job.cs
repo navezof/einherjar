@@ -4,9 +4,5 @@ using UnityEngine;
 
 public abstract class Job : MonoBehaviour {
 
-	public Pawn owner;
-
 	public int priority;
-
-	public abstract void DoJob ();
 }

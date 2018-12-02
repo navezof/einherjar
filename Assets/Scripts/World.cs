@@ -47,6 +47,10 @@ public class World : MonoBehaviour {
 		surface.BuildNavMesh ();
 	}
 
+	Land GetClosestLand() {
+		return null;
+	}
+
 	/*
 	 * DEBUG: Create a villager on the first land
 	 */

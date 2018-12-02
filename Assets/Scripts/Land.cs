@@ -46,6 +46,7 @@ public class Land : MonoBehaviour {
 				GameObject newTile = Instantiate (GetTile(), transform);
 				newTile.transform.localPosition = new Vector3 (x, 0, z);
 				newTile.gameObject.name = name + x + z;
+				newTile.GetComponent<Tile> ().land = this;
 
 				tiles.Add (newTile);
 				z++;

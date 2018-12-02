@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\GameUI.cs" />
      <Compile Include="Assets\Scripts\Gatherer.cs" />
      <Compile Include="Assets\Scripts\Hunger.cs" />
+     <Compile Include="Assets\Scripts\Idler.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\Job.cs" />
@@ -75,8 +76,10 @@
      <Compile Include="Assets\Scripts\Land.cs" />
      <Compile Include="Assets\Scripts\Move.cs" />
      <Compile Include="Assets\Scripts\Pawn.cs" />
+     <Compile Include="Assets\Scripts\Scout.cs" />
      <Compile Include="Assets\Scripts\Sleep.cs" />
      <Compile Include="Assets\Scripts\SleepUI.cs" />
+     <Compile Include="Assets\Scripts\Tile.cs" />
      <Compile Include="Assets\Scripts\World.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>E:/Workshop/Projects - Unity 5/einherjar/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
