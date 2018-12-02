@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Sleep : MonoBehaviour {
 
-	Pawn owner;
-
 	public bool isSleeping = false;
 
 	public SleepUI ui;
@@ -17,7 +15,6 @@ public class Sleep : MonoBehaviour {
 	public double energyThreshold;
 
 	void Start() {
-		owner = GetComponent<Pawn> ();
 	}
 
 	void Update () {
@@ -61,7 +58,7 @@ public class Sleep : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		ui.Setup (owner);
+		ui.Setup (this.gameObject);
 		ui.Display (true);
 	}
 }

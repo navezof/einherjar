@@ -19,12 +19,10 @@ public class BodyUI : GameUI {
 		}
 	}
 
-	public override void SetSubject(Pawn pawn) {
+	public override void SetSubject(GameObject pawn) {
 
 		if (!pawn)
 			print ("pawn is null");
-
-		owner = pawn;
 		body = pawn.GetComponent<Body> ();
 	}
 }

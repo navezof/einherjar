@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Job : MonoBehaviour {
 
-	public Pawn owner;
+	public GameObject owner;
 
 	public int priority;
 

@@ -16,8 +16,7 @@ public class JobsUI : GameUI {
 		}
 	}
 
-	public override void SetSubject(Pawn pawn) {
-		owner = pawn;
+	public override void SetSubject(GameObject pawn) {
 		jobs = pawn.GetComponent<JobManager> ();
 	}
 }

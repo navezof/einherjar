@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Body : MonoBehaviour {
 
-	public Pawn owner;
-
 	public BodyUI ui;
 
 	public double age;
@@ -13,7 +11,7 @@ public class Body : MonoBehaviour {
 	// Use this for initialization
 
 	void Start () {
-		owner = GetComponent<Pawn> ();
+
 	}
 	
 	// Update is called once per frame
@@ -30,7 +28,7 @@ public class Body : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		ui.Setup (owner);
+		ui.Setup (this.gameObject);
 		ui.Display (true);
 	}
 }

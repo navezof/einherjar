@@ -8,7 +8,7 @@ public class SleepUI : GameUI {
 
 	public Text energyText;
 
-	Sleep subjetSleep;
+	Sleep subjectSleep;
 
 	// Use this for initialization
 	void Start () {
@@ -20,15 +20,14 @@ public class SleepUI : GameUI {
 		base.Update ();
 
 		if (displayed) {
-			title.text = subjetSleep.gameObject.name + " : Energy";
-			energyText.text = subjetSleep.energyCurrent + "/" + subjetSleep.energyMax;
+			title.text = subjectSleep.gameObject.name + " : Energy";
+			energyText.text = subjectSleep.energyCurrent + "/" + subjectSleep.energyMax;
 		} else {
 			Display (false);
 		}
 	}
 
-	public override void SetSubject(Pawn pawn) {
-		owner = pawn;
-		subjetSleep = pawn.GetComponent<Sleep> ();
+	public override void SetSubject(GameObject pawn) {
+		subjectSleep = pawn.GetComponent<Sleep> ();
 	}
 }

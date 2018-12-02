@@ -12,9 +12,7 @@ public abstract class GameUI : MonoBehaviour {
 
 	public bool displayed = false;
 
-	public Pawn owner;
-
-	public abstract void SetSubject (Pawn subject);
+	public abstract void SetSubject (GameObject subject);
 
 	public void Display(bool display) {
 		displayed = display;
@@ -37,8 +35,7 @@ public abstract class GameUI : MonoBehaviour {
 		}
 	}
 
-	public void Setup(Pawn owner) {
-		SetSubject (owner);
+	public void Setup(GameObject owner) {
 		if (parent)
 			parent.GetComponent<GameUI> ().Setup (owner);
 		AllUI.ui.ResetUI ();
