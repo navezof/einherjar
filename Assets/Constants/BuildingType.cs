@@ -11,5 +11,7 @@ namespace Assets.Constants
     public class BuildingType
     {
         public const string FIRE_PIT = "firepit"; 
+        public const string FARM = "farm";
+        public const string BLACK_SMITH = "black smiths";
     }
 }

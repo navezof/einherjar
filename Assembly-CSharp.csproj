@@ -28,6 +28,7 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,6 +38,7 @@
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -62,27 +64,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Constants\BuildingType.cs" />
-    <Compile Include="Assets\Scripts\AllUI.cs" />
     <Compile Include="Assets\Scripts\Base\GameUI.cs" />
-    <Compile Include="Assets\Scripts\Body.cs" />
-    <Compile Include="Assets\Scripts\BodyUI.cs" />
-    <Compile Include="Assets\Scripts\Builder.cs" />
-    <Compile Include="Assets\Scripts\Decision.cs" />
-    <Compile Include="Assets\Scripts\DecisionManager.cs" />
-    <Compile Include="Assets\Scripts\Gatherer.cs" />
-    <Compile Include="Assets\Scripts\Hunger.cs" />
-    <Compile Include="Assets\Scripts\Inventory.cs" />
-    <Compile Include="Assets\Scripts\Item.cs" />
-    <Compile Include="Assets\Scripts\Job.cs" />
-    <Compile Include="Assets\Scripts\JobManager.cs" />
-    <Compile Include="Assets\Scripts\JobsUI.cs" />
-    <Compile Include="Assets\Scripts\Land.cs" />
-    <Compile Include="Assets\Scripts\Pawn.cs" />
-    <Compile Include="Assets\Scripts\Sleep.cs" />
-    <Compile Include="Assets\Scripts\SleepUI.cs" />
-    <Compile Include="Assets\Scripts\Tile.cs" />
-    <Compile Include="Assets\Scripts\TileUI.cs" />
-    <Compile Include="Assets\Scripts\World.cs" />
+    <Compile Include="Assets\Scripts\Entities\Building.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\AllUI.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Body.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\BodyUI.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Build.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Builder.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\BuildUI.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Decision.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\DecisionManager.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Gatherer.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Hunger.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Inventory.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Item.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Job.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\JobManager.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\JobsUI.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Land.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Pawn.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Sleep.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\SleepUI.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\World.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Personal/Unity/einherjar/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
