@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 33906599654233828}
   - component: {fileID: 23764714895151508}
   - component: {fileID: 136018323480128320}
+  - component: {fileID: 136039410606099006}
   m_Layer: 0
   m_Name: FirePit
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1711324056362578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 534, y: 164, z: 0}
+  m_LocalPosition: {x: 534, y: 168.8, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,3 +98,16 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!136 &136039410606099006
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711324056362578}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.8049152
+  m_Height: 2.5053966
+  m_Direction: 1
+  m_Center: {x: 0.052793577, y: 0.13969727, z: 0.014312744}

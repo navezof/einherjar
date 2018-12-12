@@ -26,7 +26,7 @@ public class BuildUI : MonoBehaviour {
     }
     public List<BuildingTemplate> buildingTemplates;
 
-    public GameObject CurrentTile;
+    public Build CurrentTile;
 
     // Use this for initialization
     void Start () {
@@ -55,22 +55,27 @@ public class BuildUI : MonoBehaviour {
 
     public void Display(bool visible, Build build = null)
     {
+        if (!visible)
+        {
+            parentPanel.gameObject.SetActive(false);
+            return;
+        }
+       
+        parentPanel.gameObject.SetActive(true);
+
         if (build != null)
         {
             foreach(BuildingTemplate buildTemp in buildingTemplates)
             {
                 if (build.availableBuildingNames.Contains(buildTemp.building._name))
                 {
-                    CurrentTile = build.gameObject;
+                    CurrentTile = build;
                     print($"batiment {buildTemp.building._name} Disponible");
                 }
             }
         }
 
-        if (!visible)
-            parentPanel.gameObject.SetActive(false);
-        else 
-            parentPanel.gameObject.SetActive(true);
+       
     }
 
     #region Events
@@ -80,6 +85,9 @@ public class BuildUI : MonoBehaviour {
         Vector3 tilePosition = this.CurrentTile.gameObject.transform.position;
         tilePosition.y += 50;
         GameObject newBuilding = Instantiate(buildingTemplate.buildingPrefab, tilePosition, Quaternion.identity);
+
+        this.Display(false);
+        this.CurrentTile.SetBuilding(true);
     }
     #endregion
 }

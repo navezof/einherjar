@@ -13,15 +13,15 @@ public class Build : MonoBehaviour
     // Business Logic - passer en Building Template (GO)
     public List<string> availableBuildingNames = new List<string>()
     {
-        BuildingType.FIRE_PIT,
-        BuildingType.BLACK_SMITH
+        BuildingType.FIRE_PIT
     };
 
-    private bool isBuild;
+    private bool isBuilded;
 
     // Use this for initialization
     void Start()
     {
+        isBuilded = false;
         buildUI.Display(false);
     }
 
@@ -32,11 +32,20 @@ public class Build : MonoBehaviour
 
     void OnMouseDown()
     {
-        buildUI.Display(true, this);
+        if (isBuilded)
+            print("bim, déjà un batiment");
+        else
+        {
+            buildUI.Display(true, this);
+        }
     }
 
-    public void build()
+    /// <summary>
+    /// Called by UI when building is done on this Tile
+    /// </summary>
+    /// <param name="isBuilded"></param>
+    public void SetBuilding(bool isBuilded)
     {
-        print("construction du firepit");
+        this.isBuilded = isBuilded;
     }
 }
