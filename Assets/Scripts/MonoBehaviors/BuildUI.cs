@@ -15,37 +15,36 @@ public class BuildUI : MonoBehaviour {
     public float margin = 10;
 
     /*
-	 *  Tile creation table
+	 *  Building creation table
 	*/
     [System.Serializable]
-    public class BuildTemplate
+    public class BuildingTemplate
     {
         // Build to be created
         public GameObject buildingPrefab;
-        // The higher this number, the higher the chance of this tile to be created
         public Building building;
     }
-    public List<BuildTemplate> buildingTemplates;
+    public List<BuildingTemplate> buildingTemplates;
+
+    public GameObject CurrentTile;
 
     // Use this for initialization
     void Start () {
         parentPanel.gameObject.SetActive(false);
+        CurrentTile = null;
 
         float height = buildingButton.GetComponent<RectTransform>().rect.height;
 
-        foreach (var buildingName in this.buildingTemplates)
+        foreach (var buildingTemplate in this.buildingTemplates)
         {
-            print($"construction de {buildingName.building._name}");
+            print($"construction de {buildingTemplate.building._name}");
 
-            //Button buildingListButton = Instantiate(buildingButton);
+            Button buildingListButton = Instantiate(buildingButton);
+            Text buildingTxt = buildingListButton.GetComponentInChildren<Text>();
+            buildingTxt.text = buildingTemplate.building._name;
 
-            //Text buildingTxt = buildingListButton.GetComponent<Text>();
-            //buildingTxt.text = buildingName;
-
-            //buildingListButton.transform.SetParent(parentPanel, false);
-            //buildingListButton.transform.localScale = new Vector3(0, height + margin, 0);
-
-            //buildingListButton.onClick.AddListener(() => OnBuildButtonClick(buildingName));
+            buildingListButton.transform.SetParent(parentPanel, false);
+            buildingListButton.onClick.AddListener(() => OnBuildButtonClick(buildingTemplate));
         }
     }
 	
@@ -58,10 +57,11 @@ public class BuildUI : MonoBehaviour {
     {
         if (build != null)
         {
-            foreach(BuildTemplate buildTemp in buildingTemplates)
+            foreach(BuildingTemplate buildTemp in buildingTemplates)
             {
                 if (build.availableBuildingNames.Contains(buildTemp.building._name))
                 {
+                    CurrentTile = build.gameObject;
                     print($"batiment {buildTemp.building._name} Disponible");
                 }
             }
@@ -72,4 +72,14 @@ public class BuildUI : MonoBehaviour {
         else 
             parentPanel.gameObject.SetActive(true);
     }
+
+    #region Events
+    void OnBuildButtonClick(BuildingTemplate buildingTemplate)
+    {
+        print("lancement de la construction " + buildingTemplate.building._name);
+        Vector3 tilePosition = this.CurrentTile.gameObject.transform.position;
+        tilePosition.y += 50;
+        GameObject newBuilding = Instantiate(buildingTemplate.buildingPrefab, tilePosition, Quaternion.identity);
+    }
+    #endregion
 }

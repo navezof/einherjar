@@ -35,11 +35,6 @@ public class Build : MonoBehaviour
         buildUI.Display(true, this);
     }
 
-    void OnBuildButtonClick(string buildingType)
-    {
-        print("lancement de la construction" + buildingType);
-    }
-
     public void build()
     {
         print("construction du firepit");
