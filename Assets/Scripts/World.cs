@@ -32,6 +32,15 @@ public class World : MonoBehaviour {
 			GameObject newLand = Instantiate (landTemplate, transform);
 			newLand.transform.position = new Vector3(worldLength, 0, 0);
 			newLand.GetComponent<Land> ().CreateLand (worldLength, 0);
+
+			if (lands.Count == 1) {
+				lands [0].GetComponent<Land> ().explored = 100;
+			}
+
+			if ((lands.Count - 1) >= 0) {
+				lands [lands.Count - 1].GetComponent<Land> ().nextLand = newLand.GetComponent<Land> ();
+			}
+	
 			lands.Add (newLand.GetComponent<Land>());
 
 			worldLength += newLand.GetComponent<Land> ().landLength;

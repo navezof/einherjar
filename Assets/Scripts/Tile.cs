@@ -14,6 +14,7 @@ public class Tile : MonoBehaviour {
 			if (mover.currentLand != land) {
 				print ("<" + mover.name + "> : I'm entering a new land : " + land.name);
 				mover.currentLand = land;
+				mover.SendMessage ("EnterLand", land);
 			}
 		}
 	}

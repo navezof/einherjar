@@ -51,4 +51,10 @@ public class Move : MonoBehaviour {
 	void MoveToDestination() {
 		agent.SetDestination (destination);
 	}
+
+	public void MoveToNextLand() {
+		if (currentLand.nextLand != null) {
+			SetDestination (currentLand.nextLand.transform.position);
+		}
+	}
 }

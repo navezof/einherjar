@@ -33,6 +33,13 @@ public class Land : MonoBehaviour {
 	// List of tiles contained within this land
 	List<GameObject> tiles = new List<GameObject>();
 
+	public float explored = 0;
+
+	public Land nextLand;
+	public void SetNextLand(Land newNextLand) {
+		nextLand = newNextLand;
+	}
+
 	/*
 	 * Generate a randomly created land
 	 */

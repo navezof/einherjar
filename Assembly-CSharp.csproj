@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\JobManager.cs" />
      <Compile Include="Assets\Scripts\JobsUI.cs" />
      <Compile Include="Assets\Scripts\Land.cs" />
+     <Compile Include="Assets\Scripts\Memory.cs" />
      <Compile Include="Assets\Scripts\Move.cs" />
      <Compile Include="Assets\Scripts\Pawn.cs" />
      <Compile Include="Assets\Scripts\Scout.cs" />

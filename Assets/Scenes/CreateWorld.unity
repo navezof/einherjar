@@ -152,6 +152,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114285144235555266, guid: 5865243c92004c741b0e2edd812e2276,
+        type: 2}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: a36add40a333b5a40ac0bccfbd40b266,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5865243c92004c741b0e2edd812e2276, type: 2}
   m_IsPrefabAsset: 0

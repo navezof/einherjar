@@ -4,29 +4,19 @@ using UnityEngine;
 
 public class Scout : Job {
 
+	Move move;
 
+	public bool debug = false;
+
+	void Start() {
+		move = GetComponentInParent<Move> ();
+	}
 
 	public void Update() {
-		print ("do scout");
-
-		LookForClosestUnexploredLand ();
-		MoveToClosestUnexploredLand ();
-		Explore ();
-
-		// Find unexeplored land
-		// Go to unexplored land random point
-		// Add completion to land
-		// If land is explored
-		// If no more land, do second job
-	}
-
-	void LookForClosestUnexploredLand () {
-	}
-
-	void MoveToClosestUnexploredLand () {
-	}
-
-	void Explore() {
-		
+		if (move.currentLand.explored >= 100f) {
+			move.MoveToNextLand ();
+		} else {
+			move.currentLand.explored += 1f;
+		}
 	}
 }
