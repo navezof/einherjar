@@ -11,7 +11,7 @@ public class BuildUI : MonoBehaviour {
     // UI 
     public Transform parentPanel;
     public Text title;
-    public Button buildingButton;
+    public Button buildingBtn;
     public float margin = 10;
 
     /*
@@ -33,13 +33,13 @@ public class BuildUI : MonoBehaviour {
         parentPanel.gameObject.SetActive(false);
         CurrentTile = null;
 
-        float height = buildingButton.GetComponent<RectTransform>().rect.height;
+        float height = buildingBtn.GetComponent<RectTransform>().rect.height;
 
         foreach (var buildingTemplate in this.buildingTemplates)
         {
             print($"construction de {buildingTemplate.building._name}");
 
-            Button buildingListButton = Instantiate(buildingButton);
+            Button buildingListButton = Instantiate(buildingBtn);
             Text buildingTxt = buildingListButton.GetComponentInChildren<Text>();
             buildingTxt.text = buildingTemplate.building._name;
 
@@ -50,8 +50,15 @@ public class BuildUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        //If player presses escape and game is not paused. Pause game. If game is paused and player presses escape, unpause.
+        if (Input.GetKeyDown(KeyCode.Escape))
+            parentPanel.gameObject.SetActive(false);
+    }
+
+    public void Exit()
+    {
+        Display(false);
+    }
 
     public void Display(bool visible, Build build = null)
     {
