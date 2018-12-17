@@ -10,6 +10,9 @@ public class Move : MonoBehaviour {
 
 	public Vector3 destination;
 
+	public Land currentLand;
+	public Tile currentTile;
+
 	// DEBUG
 	public Camera cam;
 
@@ -34,11 +37,24 @@ public class Move : MonoBehaviour {
 		MoveToDestination ();
 	}
 
+	public bool IsArrivedAtDestination() {
+		if (agent.remainingDistance != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0) {
+			return true;
+		}
+		return false;
+	}
+
 	public void SetDestination(Vector3 newDestination) {
 		destination = newDestination;
 	}
 
 	void MoveToDestination() {
 		agent.SetDestination (destination);
+	}
+
+	public void MoveToNextLand() {
+		if (currentLand.nextLand != null) {
+			SetDestination (currentLand.nextLand.transform.position);
+		}
 	}
 }

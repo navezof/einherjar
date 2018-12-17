@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4635335203257416}
   - component: {fileID: 114736458228586592}
   - component: {fileID: 114285144235555266}
+  - component: {fileID: 114579448513074236}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -68,7 +69,18 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.083333336
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: a36add40a333b5a40ac0bccfbd40b266, type: 2}
+  m_NavMeshData: {fileID: 0}
+--- !u!114 &114579448513074236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1108155729657126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5164570772d8249a5a8d713b5b6606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114736458228586592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -82,9 +94,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landTemplates:
   - {fileID: 1973452909342826, guid: 3e3b7a663924a684b92490dfe6eff85c, type: 2}
-  - {fileID: 1583757234049406, guid: 5883c08498be7fe408073fb1b7ab800e, type: 2}
+  - {fileID: 1973452909342826, guid: 3e3b7a663924a684b92490dfe6eff85c, type: 2}
   - {fileID: 1509762712297396, guid: 0cca38cfcdd0fdc4b8d0fd074ad8486b, type: 2}
   - {fileID: 1583757234049406, guid: 5883c08498be7fe408073fb1b7ab800e, type: 2}
   - {fileID: 1509762712297396, guid: 0cca38cfcdd0fdc4b8d0fd074ad8486b, type: 2}
   - {fileID: 1973452909342826, guid: 3e3b7a663924a684b92490dfe6eff85c, type: 2}
-  villager: {fileID: 1080297109432278, guid: 6b679ec219a57404fa738ae84bcb8ed4, type: 2}
+  villager: {fileID: 1531187234075418, guid: 6652d1245233bd343bbc96c8e480f227, type: 2}

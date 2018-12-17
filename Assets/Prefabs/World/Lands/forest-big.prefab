@@ -48,18 +48,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1583757234049406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c377d121821e63b4f953bf75ce416898, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c142cff67834d54aaa108acc6e7dc11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lengthMin: 10
-  lengthMax: 12
+  lengthMin: 5
+  lengthMax: 7
   widthMin: 3
-  widthMax: 6
+  widthMax: 5
   landLength: 0
   tileTemplates:
   - tile: {fileID: 1230940682551232, guid: ada1e065e8d5a7e4e9deb44905966607, type: 2}
-    rarity: 60
+    rarity: 75
   - tile: {fileID: 1067544003585776, guid: f657f0d9cc74a0241aaf7f498c153066, type: 2}
-    rarity: 30
+    rarity: 25
   - tile: {fileID: 1889736032525972, guid: 0618599025feddf4a9ca8938cdcf0d87, type: 2}
-    rarity: 20
+    rarity: 10
+  explored: 0
+  nextLand: {fileID: 0}

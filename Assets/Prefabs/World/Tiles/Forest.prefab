@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33042455744805382}
   - component: {fileID: 23270374393714834}
   - component: {fileID: 65178371936269978}
+  - component: {fileID: 114223335490118528}
   m_Layer: 0
   m_Name: Forest
   m_TagString: Untagged
@@ -91,8 +92,20 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1230940682551232}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.2, z: 1}
+  m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!114 &114223335490118528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1230940682551232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95b930f023da37747a2a66c7363f744d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  land: {fileID: 0}
