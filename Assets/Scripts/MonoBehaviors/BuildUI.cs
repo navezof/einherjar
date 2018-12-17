@@ -81,8 +81,6 @@ public class BuildUI : MonoBehaviour {
                 }
             }
         }
-
-       
     }
 
     #region Events

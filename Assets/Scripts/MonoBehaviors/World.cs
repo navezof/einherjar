@@ -18,7 +18,7 @@ public class World : MonoBehaviour {
 	NavMeshSurface surface;
 
 	//List of lands contained in the world
-	List<Land> lands = new List<Land>();
+	public List<Land> lands = new List<Land>();
 
 	void Awake() {
 		GenerateWorld ();

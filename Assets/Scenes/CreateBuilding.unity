@@ -138,17 +138,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18929742}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.12196775, y: 0.56262, z: 1}
   m_Children:
   - {fileID: 689812365}
-  m_Father: {fileID: 1435912247}
+  m_Father: {fileID: 229146270}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 165}
+  m_AnchoredPosition: {x: 107.599976, y: 100.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &18929744
@@ -271,6 +271,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1964450279}
+  - {fileID: 18929743}
   m_Father: {fileID: 1435912247}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -704,7 +705,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 229146270}
-  - {fileID: 18929743}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -729,7 +729,6 @@ MonoBehaviour:
   title: {fileID: 1964450280}
   buildingBtn: {fileID: 114521303420202006, guid: f3308303d0a3a914a9b2cf5c5965a4d2,
     type: 3}
-  exitBtn: {fileID: 0}
   margin: 10
   buildingTemplates:
   - buildingPrefab: {fileID: 1711324056362578, guid: 287571a0c10224547b5e1d905857199a,
