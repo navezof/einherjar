@@ -25,7 +25,7 @@ public class Move : MonoBehaviour {
 	 * DEBUG : Set the destination b clicking 
 	 */
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (1)) {
 			Ray ray = cam.ScreenPointToRay (Input.mousePosition);
 			RaycastHit hit;
 
@@ -48,7 +48,7 @@ public class Move : MonoBehaviour {
 		destination = newDestination;
 	}
 
-	void MoveToDestination() {
+	public void MoveToDestination() {
 		agent.SetDestination (destination);
 	}
 

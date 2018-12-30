@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Constants\BuildingType.cs" />
+    <Compile Include="Assets\Constants\Global.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshGenerator.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
@@ -83,7 +84,7 @@
     <Compile Include="Assets\Scripts\MonoBehaviors\Item.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Job.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\JobManager.cs" />
-    <Compile Include="Assets\Scripts\MonoBehaviors\JobsUI.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\JobUI.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Land.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Memory.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Move.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\Scripts\MonoBehaviors\SleepUI.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Tile.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\VictoryUI.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\Villager.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\World.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Personal/Unity/einherjar/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

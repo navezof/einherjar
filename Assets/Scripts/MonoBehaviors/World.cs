@@ -23,7 +23,7 @@ public class World : MonoBehaviour {
 	void Awake() {
 		GenerateWorld ();
 		UpdateNavMesh ();
-		SpawnVillager ();
+		//SpawnVillager ();
 	}
 
 	void GenerateWorld() {
@@ -52,7 +52,6 @@ public class World : MonoBehaviour {
 	 */
 	void UpdateNavMesh() {
 		surface = GetComponent<NavMeshSurface> ();
-
 		surface.BuildNavMesh ();
 	}
 
@@ -60,10 +59,11 @@ public class World : MonoBehaviour {
 		return null;
 	}
 
-	/*
+    /*
 	 * DEBUG: Create a villager on the first land
 	 */
-	void SpawnVillager() {
-		GameObject newVillager = Instantiate (villager, lands [0].transform.position + new Vector3 (0, 0.5f, 0), lands [0].transform.rotation);
-	}
+    void SpawnVillager()
+    {
+        GameObject newVillager = Instantiate(villager, lands[0].transform.position + new Vector3(0, 0.5f, 0), lands[0].transform.rotation);
+    }
 }
