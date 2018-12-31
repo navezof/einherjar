@@ -9,17 +9,16 @@ using UnityEngine.UI;
 /// </summary>
 public class VictoryUI : MonoBehaviour
 {
-    public Text youWinText;
-
     private World world;
+    public Transform panel;
     // Start is called before the first frame update
     void Start()
     {
-        world = GetComponent<World>();
+        world = FindObjectsOfType<World>().First();
         if (world == null)
             print("No world script attached");
-        else 
-            youWinText.gameObject.SetActive(false);
+        else
+            panel.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,6 +26,6 @@ public class VictoryUI : MonoBehaviour
     {
         bool youWin = !world.lands.Any((Land land) => land.explored != 100f);
         if (youWin)
-            youWinText.gameObject.SetActive(true);
+            panel.gameObject.SetActive(true); 
     }
 }

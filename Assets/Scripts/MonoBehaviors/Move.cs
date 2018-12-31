@@ -19,6 +19,7 @@ public class Move : MonoBehaviour {
 	void Start() {
 		cam = Camera.main;
 		agent = GetComponent<NavMeshAgent> ();
+        destination = transform.position;
 	}
 		
 	/*
@@ -33,7 +34,6 @@ public class Move : MonoBehaviour {
 				SetDestination (hit.point);
 			}
 		}
-
 		MoveToDestination ();
 	}
 

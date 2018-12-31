@@ -5,8 +5,9 @@ using UnityEngine.AI;
 
 public class World : MonoBehaviour {
 
-	// Template of land used to create the world
-	public GameObject[] landTemplates;
+    public bool debug = false;
+    // Template of land used to create the world
+    public GameObject[] landTemplates;
 
 	// DEBUG: Villager to spawn
 	public GameObject villager;
@@ -23,7 +24,8 @@ public class World : MonoBehaviour {
 	void Awake() {
 		GenerateWorld ();
 		UpdateNavMesh ();
-		//SpawnVillager ();
+        if (debug)
+            SpawnVillager ();
 	}
 
 	void GenerateWorld() {

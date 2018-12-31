@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class JobUI : MonoBehaviour {
 
-    public Transform parentPanel;
     public Button jobBtn;
     public float margin = 10;
 
@@ -11,25 +10,25 @@ public class JobUI : MonoBehaviour {
 
     private void Start()
     {
-        parentPanel.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     void Update() {
-
-    }
-
-    public void OnJobButtonClick(Job selectedJob)
-    {
-        _jobsManager.SetJob(selectedJob);
-        Display(false);
+        if (Input.GetKeyDown(KeyCode.Escape) 
+                && gameObject.activeSelf)
+            gameObject.SetActive(false);
     }
 
     public void Display(bool visible, JobManager jobsManager = null)
     {
         this._jobsManager = jobsManager;
-        this.parentPanel.gameObject.SetActive(visible);
+        this.gameObject.SetActive(visible);
         if (jobsManager != null)
+        {
             GenerateButton(jobsManager.jobs);
+            // Display near the pawn
+            transform.localPosition = jobsManager.transform.localPosition;
+        }
     }
 
     public void GenerateButton(Job[] jobs)
@@ -42,11 +41,18 @@ public class JobUI : MonoBehaviour {
             Text buildingTxt = jobListButton.GetComponentInChildren<Text>();
             buildingTxt.text = availableJob.jobName;
 
-            jobListButton.transform.SetParent(parentPanel, false);
+            jobListButton.transform.SetParent(gameObject.transform, false);
             Vector3 position = new Vector3(jobListButton.transform.position.x, jobListButton.transform.position.y + yPosition);
             jobListButton.transform.position​ = position;
             yPosition -= (btnHeight + margin);
             jobListButton.onClick.AddListener(() => OnJobButtonClick(availableJob));
         }
     }
+
+    public void OnJobButtonClick(Job selectedJob)
+    {
+        _jobsManager.SetJob(selectedJob);
+        Display(false);
+    }
+
 }

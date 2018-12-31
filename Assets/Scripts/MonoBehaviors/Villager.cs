@@ -13,24 +13,24 @@ public class Villager : Job
         toggle = true;
         move = GetComponentInParent<Move>();
         jobName = "Villager";
+        StartCoroutine(Strolling());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Strolling()
     {
-        Strolling();
-    }
-
-    private void Strolling()
-    {
-        if (move.IsArrivedAtDestination())
+        while (true)
         {
-            float x = (toggle) ? (transform.position.x + 3f) : transform.position.x - 3f;
-            Vector3 newPosition = new Vector3(x, transform.position.y);
-            move.SetDestination(newPosition);
-            toggle = !toggle;
+            if (move.IsArrivedAtDestination())
+            {
+                float x = (toggle) ? (transform.position.x + 1.5f) : transform.position.x - 1.5f;
+                Vector3 newPosition = new Vector3(x, transform.position.y);
+                move.SetDestination(newPosition);
+                toggle = !toggle;
+                yield return new WaitForSeconds(3f);
+            }
+            move.MoveToDestination();
+            yield return null;
         }
-        move.MoveToDestination();
     }
 
     private void OnEnable()

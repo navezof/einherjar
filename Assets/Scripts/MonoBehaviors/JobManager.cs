@@ -12,7 +12,7 @@ public class JobManager : MonoBehaviour {
     {
         GameObject globalUis = GameObject.Find(Global.UI_CONTAINER);
         if (globalUis == null)
-            throw new System.Exception($"Can't find global UIs Game Object named : ${Global.UI_CONTAINER}");
+            throw new System.Exception($"Can't find global UIs Game Object named : {Global.UI_CONTAINER}");
         this.jobUI = globalUis.GetComponentsInChildren<JobUI>().First();
     }
 
