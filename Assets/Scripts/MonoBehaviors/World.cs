@@ -5,8 +5,9 @@ using UnityEngine.AI;
 
 public class World : MonoBehaviour {
 
-	// Template of land used to create the world
-	public GameObject[] landTemplates;
+    public bool debug = false;
+    // Template of land used to create the world
+    public GameObject[] landTemplates;
 
 	// DEBUG: Villager to spawn
 	public GameObject villager;
@@ -18,12 +19,13 @@ public class World : MonoBehaviour {
 	NavMeshSurface surface;
 
 	//List of lands contained in the world
-	List<Land> lands = new List<Land>();
+	public List<Land> lands = new List<Land>();
 
 	void Awake() {
 		GenerateWorld ();
 		UpdateNavMesh ();
-		SpawnVillager ();
+        if (debug)
+            SpawnVillager ();
 	}
 
 	void GenerateWorld() {
@@ -52,7 +54,6 @@ public class World : MonoBehaviour {
 	 */
 	void UpdateNavMesh() {
 		surface = GetComponent<NavMeshSurface> ();
-
 		surface.BuildNavMesh ();
 	}
 
@@ -60,10 +61,11 @@ public class World : MonoBehaviour {
 		return null;
 	}
 
-	/*
+    /*
 	 * DEBUG: Create a villager on the first land
 	 */
-	void SpawnVillager() {
-		GameObject newVillager = Instantiate (villager, lands [0].transform.position + new Vector3 (0, 0.5f, 0), lands [0].transform.rotation);
-	}
+    void SpawnVillager()
+    {
+        GameObject newVillager = Instantiate(villager, lands[0].transform.position + new Vector3(0, 0.5f, 0), lands[0].transform.rotation);
+    }
 }

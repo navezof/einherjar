@@ -9,7 +9,8 @@ public class Scout : Job {
 	public bool debug = false;
 
 	void Start() {
-		move = GetComponentInParent<Move> ();
+        jobName = "Scout";
+        move = GetComponentInParent<Move> ();
 	}
 
 	public void Update() {
@@ -19,4 +20,22 @@ public class Scout : Job {
 			move.currentLand.explored += 1f;
 		}
 	}
+
+    private void OnEnable()
+    {
+        //Fetch the Renderer from the GameObject
+        Renderer rend = GetComponentInParent<Renderer>();
+        //Set the main Color of the Material to green
+        rend.material.shader = Shader.Find("_Color");
+        rend.material.SetColor("_Color", Color.red);
+    }
+
+    private void OnDisable()
+    {
+        //Fetch the Renderer from the GameObject
+        Renderer rend = GetComponentInParent<Renderer>();
+        //Set the main Color of the Material to green
+        rend.material.shader = Shader.Find("_Color");
+        rend.material.SetColor("_Color", Color.white);
+    }
 }

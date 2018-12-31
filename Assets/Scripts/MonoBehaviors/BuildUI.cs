@@ -9,9 +9,7 @@ using UnityEngine.UI;
 public class BuildUI : MonoBehaviour {
 
     // UI 
-    public Transform parentPanel;
-    public Text title;
-    public Button buildingButton;
+    public Button buildingBtn;
     public float margin = 10;
 
     /*
@@ -30,38 +28,43 @@ public class BuildUI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        parentPanel.gameObject.SetActive(false);
+        gameObject.SetActive(false);
         CurrentTile = null;
-
-        float height = buildingButton.GetComponent<RectTransform>().rect.height;
+        float height = buildingBtn.GetComponent<RectTransform>().rect.height;
 
         foreach (var buildingTemplate in this.buildingTemplates)
         {
             print($"construction de {buildingTemplate.building._name}");
 
-            Button buildingListButton = Instantiate(buildingButton);
+            Button buildingListButton = Instantiate(buildingBtn);
             Text buildingTxt = buildingListButton.GetComponentInChildren<Text>();
             buildingTxt.text = buildingTemplate.building._name;
 
-            buildingListButton.transform.SetParent(parentPanel, false);
+            buildingListButton.transform.SetParent(gameObject.transform, false);
             buildingListButton.onClick.AddListener(() => OnBuildButtonClick(buildingTemplate));
         }
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Input.GetKeyDown(KeyCode.Escape))
+            gameObject.SetActive(false);
+    }
+
+    public void Exit()
+    {
+        Display(false);
+    }
 
     public void Display(bool visible, Build build = null)
     {
         if (!visible)
         {
-            parentPanel.gameObject.SetActive(false);
+            gameObject.SetActive(false);
             return;
         }
        
-        parentPanel.gameObject.SetActive(true);
+        gameObject.SetActive(true);
 
         if (build != null)
         {
@@ -74,20 +77,13 @@ public class BuildUI : MonoBehaviour {
                 }
             }
         }
-
-       
     }
 
     #region Events
     void OnBuildButtonClick(BuildingTemplate buildingTemplate)
     {
-        print("lancement de la construction " + buildingTemplate.building._name);
-        Vector3 tilePosition = this.CurrentTile.gameObject.transform.position;
-        tilePosition.y += 50;
-        GameObject newBuilding = Instantiate(buildingTemplate.buildingPrefab, tilePosition, Quaternion.identity);
-
+        CurrentTile.SetBuilding(buildingTemplate);
         this.Display(false);
-        this.CurrentTile.SetBuilding(true);
     }
     #endregion
 }

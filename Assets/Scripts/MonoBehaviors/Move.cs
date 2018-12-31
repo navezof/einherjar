@@ -19,13 +19,14 @@ public class Move : MonoBehaviour {
 	void Start() {
 		cam = Camera.main;
 		agent = GetComponent<NavMeshAgent> ();
+        destination = transform.position;
 	}
 		
 	/*
 	 * DEBUG : Set the destination b clicking 
 	 */
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (1)) {
 			Ray ray = cam.ScreenPointToRay (Input.mousePosition);
 			RaycastHit hit;
 
@@ -33,7 +34,6 @@ public class Move : MonoBehaviour {
 				SetDestination (hit.point);
 			}
 		}
-
 		MoveToDestination ();
 	}
 
@@ -48,7 +48,7 @@ public class Move : MonoBehaviour {
 		destination = newDestination;
 	}
 
-	void MoveToDestination() {
+	public void MoveToDestination() {
 		agent.SetDestination (destination);
 	}
 
