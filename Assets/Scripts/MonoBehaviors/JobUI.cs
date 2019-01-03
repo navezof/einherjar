@@ -14,9 +14,14 @@ public class JobUI : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape) 
+        if (Input.GetKeyDown(KeyCode.Escape)
                 && gameObject.activeSelf)
-            gameObject.SetActive(false);
+            Hide();    
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 
     public void Display(bool visible, JobManager jobsManager = null)

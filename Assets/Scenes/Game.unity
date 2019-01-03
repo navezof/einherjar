@@ -949,6 +949,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -13
       objectReference: {fileID: 0}
+    - target: {fileID: 2975746741058381008, guid: 33af052acd3862d44bdccbc0b4b07bcc,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975746741058381008, guid: 33af052acd3862d44bdccbc0b4b07bcc,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2975746741058381010, guid: 33af052acd3862d44bdccbc0b4b07bcc,
         type: 3}
       propertyPath: panel
