@@ -89,7 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8c7be331dceba4a9033ecfd3cff689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentPanel: {fileID: 1486167077}
   jobBtn: {fileID: 114521303420202006, guid: f3308303d0a3a914a9b2cf5c5965a4d2, type: 3}
   margin: 10
 --- !u!1 &12083459534251476
@@ -366,8 +365,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Exit
+      - m_Target: {fileID: 1486167079}
+        m_MethodName: Hide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
