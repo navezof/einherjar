@@ -75,6 +75,8 @@
     <Compile Include="Assets\Scripts\MonoBehaviors\Build.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Builder.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\BuildUI.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\ClockUI.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\DayNightController.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Decision.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\DecisionManager.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Gatherer.cs" />
