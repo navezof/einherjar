@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.AI;
 
 public class Move : MonoBehaviour {
 
 	NavMeshAgent agent;
-
+    public DayNightController dnCtrl;
 	public Vector3 destination;
 
 	public Land currentLand;
@@ -16,17 +15,20 @@ public class Move : MonoBehaviour {
 	// DEBUG
 	public Camera cam;
 
-	void Start() {
+    void Start() {
 		cam = Camera.main;
 		agent = GetComponent<NavMeshAgent> ();
         destination = transform.position;
 	}
 		
 	/*
-	 * DEBUG : Set the destination b clicking 
+	 * DEBUG : Set the destination by clicking 
 	 */
 	void Update () {
-		if (Input.GetMouseButtonDown (1)) {
+        if (dnCtrl && dnCtrl.IsNight())
+            return;
+        
+        if (Input.GetMouseButtonDown (1)) {
 			Ray ray = cam.ScreenPointToRay (Input.mousePosition);
 			RaycastHit hit;
 
@@ -34,8 +36,9 @@ public class Move : MonoBehaviour {
 				SetDestination (hit.point);
 			}
 		}
-		MoveToDestination ();
-	}
+
+        MoveToDestination();
+    }
 
 	public bool IsArrivedAtDestination() {
 		if (agent.remainingDistance != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0) {

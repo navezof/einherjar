@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\MonoBehaviors\Land.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Memory.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Move.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviors\NightAfraid.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Pawn.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Scout.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviors\Sleep.cs" />

@@ -63,5 +63,6 @@ public class Build : MonoBehaviour
         newBuilding.transform.position = tilePosition;
 
         this.isBuilded = true;
+        this.tag = buildingTemplate.building._name;
     }
 }
