@@ -526,6 +526,11 @@ PrefabInstance:
       propertyPath: sun
       value: 
       objectReference: {fileID: 1965293537}
+    - target: {fileID: 8741986358548896498, guid: 0c5521bfa940e9d4cb75cd1a6b5ca346,
+        type: 3}
+      propertyPath: currentTimeOfDay
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c5521bfa940e9d4cb75cd1a6b5ca346, type: 3}
 --- !u!114 &1228116716 stripped
